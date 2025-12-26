@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Form Validation</title>
+</head>
+<body>
+    <h2>Register Account</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label>Username (min 5 characters):</label><br>
+        <input type="text" id="username" oninput="checkLength()" required>
+        <span id="msg" style="color:red"></span>
+        <br><br>
+        <label>Email:</label><br>
+        <input type="email" id="email" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function checkLength() {
+            const userField = document.getElementById("username");
+            const message = document.getElementById("msg");
+
+            if (userField.value.length > 0 && userField.value.length < 5) {
+                message.innerText = " Too short...";
+            } else {
+                message.innerText = "";
+            }
+        }
+        function validateForm() {
+            const userValue = document.getElementById("username").value;
+            const emailValue = document.getElementById("email").value;
+            if (userValue.length < 5) {
+                alert("Error: Username must be at least 5 characters long!");
+                return false;
+            }
+            if (!emailValue.includes("@")) {
+                alert("Error: Please enter a valid email address!");
+                return false; 
+            }
+            alert("Success! Form submitted for: " + userValue);
+            return true;
+        }
+    </script>
+
+</body>
+</html>

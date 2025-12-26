@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Table Layout</title>
+</head>
+<body>
+    <h1>Data Organization with Tables</h1>
+    <table border="1" cellpadding="10" cellspacing="0" width="80%">
+        <caption><strong>Weekly Project Milestone Schedule</strong></caption>
+        <thead>
+            <tr bgcolor="#f2f2f2">
+                <th>Time Slot</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>09:00 AM</td>
+                <td colspan="2" align="center">Design Workshop (Shared Session)</td>
+                <td>Research</td>
+            </tr>
+            <tr>
+                <td>11:00 AM</td>
+                <td>Coding</td>
+                <td rowspan="2" align="center" valign="middle">Database Migration</td>
+                <td>Coding</td>
+            </tr>
+            <tr>
+                <td>01:00 PM</td>
+                <td>Review</td>
+                <td>Documentation</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr align="right">
+                <td colspan="4"><em>Last Updated: December 2025</em></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+    <p>Please fill out the details below to enroll in our program.</p>
+    <form action="/submit-form" method="POST">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                <label for="full-name">Full Name:</label><br>
+                <input type="text" id="full-name" name="user_name" placeholder="John Doe" required>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Learning Mode</legend>
+            <p>
+                <input type="radio" id="online" name="mode" value="online">
+                <label for="online">Online</label><br>
+                
+                <input type="radio" id="in-person" name="mode" value="in-person">
+                <label for="in-person">In-Person</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Interested Topics</legend>
+            <p>
+                <input type="checkbox" id="html" name="topic" value="html">
+                <label for="html">HTML & CSS</label><br>
+                
+                <input type="checkbox" id="js" name="topic" value="javascript">
+                <label for="js">JavaScript</label><br>
+                
+                <input type="checkbox" id="python" name="topic" value="python">
+                <label for="python">Python</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Experience Level</legend>
+            <p>
+                <label for="experience">Select your level:</label>
+                <select id="experience" name="level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </p>
+        </fieldset>
+        <br>
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+</body>
+</html>

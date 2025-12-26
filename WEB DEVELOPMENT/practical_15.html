@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1 id="header">Old Title</h1>
+    <div id="content-area">
+        <p>This is the original paragraph.</p>
+    </div>
+
+    <button id="changeBtn">Update Page</button>
+
+    <script>
+        const myHeader = document.getElementById('header');
+        const myContainer = document.querySelector('#content-area');
+        const myButton = document.getElementById('changeBtn');
+        myButton.addEventListener('click', function() {
+            myHeader.innerHTML = "DOM Manipulation Success!";
+            
+            myContainer.innerHTML = `
+                <ul>
+                    <li>Item 1: Added via JS</li>
+                    <li>Item 2: <strong>Styled with tags</strong></li>
+                </ul>
+            `;
+            myHeader.style.color = "orange";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Looping and Conditional</title>
+</head>
+<body>
+    <script>
+        let score = 85;
+    if (score >= 90) {
+    document.write("Grade: A"+"<br>");
+}   else if (score >= 80) {
+    document.write("Grade: B"+"<br>");
+}   else {
+    document.write("Grade: C"+"<br>");
+}
+    document.write("Counting to 5:"+"<br>");
+    for (let i = 1; i <= 5; i++) {
+    document.write("Number: " + i+"<br>");
+}
+let energy = 3;
+while (energy > 0) {
+    document.write("Working... Energy left: " + energy+"<br>");
+    energy--;
+}
+let count = 10;
+do {
+    document.write("This will print once even if the condition is false."+"<br>");
+    count++;
+} while (count < 5);
+    </script>
+</body>
+</html>

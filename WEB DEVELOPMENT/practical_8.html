@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demonstration</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 10px;
+            padding: 5px;
+        }
+        .highlight {
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+        #unique-section {
+            color: white;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        div p {
+            font-style: italic;
+            color: gray;
+        }
+        h2, h4 {
+            color: navy;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demonstration of CSS Selectors</h1>
+    <h2>Universal, Class, ID, Descendant, and Group Selectors</h2>
+    <p>This is a standard paragraph. Note that all elements have a default margin and padding due to the <strong>universal selector (*)</strong>.</p>
+    <p class="highlight">This paragraph is styled using the <strong>class selector (.)</strong>. Multiple elements can share this style.</p>
+    <div id="unique-section">
+        <p>This content is inside the "unique-section" div. The background and text color are applied via the <strong>ID selector (#)</strong>, which should only be used once per page.</p>
+        <p>This nested paragraph is styled by the <strong>descendant selector (div p)</strong>, which targets any `p` tag inside a `div`.</p>
+    </div>
+    <div>
+        <p>This paragraph is also inside a different div and is affected by the <strong>descendant selector</strong>.</p>
+    </div>
+    <h4>Another heading using the group selector</h4>
+    <p class="highlight">This is another paragraph using the <strong>class selector</strong>, demonstrating it can be used on multiple elements.</p>
+</body>
+</html>

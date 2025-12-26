@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        main {
+            padding: 5%;
+            background: #ecf0f1;
+        }
+
+        aside {
+            background: #bdc3c7;
+            padding: 5%;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Responsive Site</h1>
+        </header>
+        
+        <main>
+            <h2>Main Content</h2>
+            <p>On mobile, I am at the top. On desktop, I sit next to the sidebar. My width is defined in flexible percentages!</p>
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Extra links or info go here.</p>
+        </aside>
+    </div>
+
+</body>
+</html>
